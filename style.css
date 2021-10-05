@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -66,6 +68,33 @@ body {
   color: white;
 }
 
+header {
+  padding: 0.6rem 1rem;
+  display: flex;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 0px rgb(34 60 80 / 20%);
+  align-items: center;
+}
+
+.header-title {
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.input-text {
+  padding: 0.4rem 0.5rem;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 0.2rem;
+  font-family: system-ui;
+  width: 250px;
+}
+
+.input-text:focus {
+  border: 1px solid #ff4040;
+}
+
 h3 {
   font-family: system-ui;
 }
@@ -74,11 +103,36 @@ h3 {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 400px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .header-title {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .input-container {
+    width: 100%;
+  }
+
+  .input-text {
+    width: 100%;
   }
 }
 
