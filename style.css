@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.wrapper {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+
+.poster-container {
+  position: relative;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 4px 4px 6px 0px rgb(34 60 80 / 20%);
+}
+
+.poster:hover {
+  transform: translateY(-0.4rem);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border: none;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-family: system-ui;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px 0px rgb(34 60 80 / 20%);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ff4040;
+  color: white;
+}
+
+.active {
+  background-color: #ff4040;
+  color: white;
+}
+
+h3 {
+  font-family: system-ui;
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

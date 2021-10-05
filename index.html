@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="tv.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie app</title>
+  </head>
+  <body>
+    <div class="wrapper" id="app">
+      <div class="menu">
+        <button
+          class="btn"
+          :class="{ active: type == 'TOP_100_POPULAR_FILMS' }"
+          @click="changeType('TOP_100_POPULAR_FILMS')"
+        >
+          Популярные
+        </button>
+        <button
+          class="btn"
+          :class="{ active: type == 'TOP_250_BEST_FILMS' }"
+          @click="changeType('TOP_250_BEST_FILMS')"
+        >
+          Лучшие
+        </button>
+        <button
+          class="btn"
+          :class="{ active: type == 'TOP_AWAIT_FILMS' }"
+          @click="changeType('TOP_AWAIT_FILMS')"
+        >
+          Ожидаемые
+        </button>
+      </div>
+      <div class="grid">
+        <div class="poster-container" v-for="movie in movies">
+          <img class="poster" :src="movie.posterUrl" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
